@@ -29,7 +29,7 @@
             <td><%= book.title %></td>
             <td><%= book.genre %></td>
             <td><%= book.published %></td>
-            <td><%= link_to 'New', new_author_book_path(@author, book) %></td>
+            <td><%= link_to 'New', edit_author_book_path(@author, book) %></td>
             <td><%= link_to 'Edit', edit_author_book_path(@author, book) %></td>
             <td><%= link_to 'see more', author_book_path(@author, book) %></td>
             <!-- <td><#%= link_to 'delete', author_book_url(@author, book) method: :delete %#></td> -->
