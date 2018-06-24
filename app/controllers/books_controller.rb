@@ -1,24 +1,7 @@
-# Sparta Weekend Homework - Rails nested routes
+class BooksController < ApplicationController
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
 
-This backend project is mock database within a database, simulating books and authors. This is a bare-bones data management production and I used Ruby on Rails to accomplish it.
-
-## Core task requirements
-
-* Create a minimum of two resources
-* One-to-many relationship
-* Using an MVC model
-* 7 RESTFUL routes for both resources 
- 
-## Operation Instructions
-
-Fork/clone this repo via Github:
-[git@github.com:YannLL/sparta-nested-resource-homework.git](git@github.com:YannLL/sparta-nested-resource-homework.git)
-
-## Sample code
-### 7 REST routes
-
-~~~ ruby
-# GET /books
+  # GET /books
   # GET /books.json
   def index
     @books = Book.all
@@ -93,4 +76,3 @@ Fork/clone this repo via Github:
       params.require(:book).permit(:title, :genre, :published, :author_id)
     end
 end
-~~~
